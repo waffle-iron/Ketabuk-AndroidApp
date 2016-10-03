@@ -1,6 +1,5 @@
 package com.ketabuk.android.activities;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,7 @@ import android.widget.ImageButton;
 
 import com.ketabuk.android.R;
 
-public class IntroActivity extends AppCompatActivity implements View.OnClickListener {
+public class IntroActivity extends AppCompatActivity implements View.OnClickListener, IntroActivityInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
