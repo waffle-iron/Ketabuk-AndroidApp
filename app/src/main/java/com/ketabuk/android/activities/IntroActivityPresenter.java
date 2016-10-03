@@ -11,8 +11,8 @@ import android.view.animation.PathInterpolator;
  */
 
 public class IntroActivityPresenter implements IntroActivityPresenterInterface {
-    Context context;
-    IntroActivityInterface introActivityInterface;
+    private Context context;
+    private IntroActivityInterface introActivityInterface;
 
     IntroActivityPresenter(Context context, IntroActivityInterface introActivityInterface){
         this.context = context;

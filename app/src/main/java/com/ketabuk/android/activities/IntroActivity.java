@@ -11,26 +11,24 @@ import com.ketabuk.android.R;
 
 public class IntroActivity extends AppCompatActivity implements View.OnClickListener, IntroActivityInterface {
 
+    private IntroActivityPresenterInterface introActivityPresenterInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        ImageButton githubStartHere = (ImageButton) findViewById(R.id.github_start_here);
-        githubStartHere.setOnClickListener(this);
+        ImageButton gitHubStartHere = (ImageButton) findViewById(R.id.github_start_here);
+        gitHubStartHere.setOnClickListener(this);
+
+        introActivityPresenterInterface = new IntroActivityPresenter(getApplicationContext(), this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.github_start_here:
-                goToURL(getString(R.string.github_start_here));
+                introActivityPresenterInterface.goToURL(getString(R.string.github_start_here));
         }
-    }
-
-    void goToURL(String url) {
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
     }
 }
