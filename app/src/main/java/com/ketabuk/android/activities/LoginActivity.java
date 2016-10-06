@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.ketabuk.android.R;
+import com.ketabuk.android.interfaces.LoginActivityInterface;
 
-public class LoginActivity extends AppCompatActivity implements LoginActivityInterface{
+public class LoginActivity extends AppCompatActivity implements LoginActivityInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

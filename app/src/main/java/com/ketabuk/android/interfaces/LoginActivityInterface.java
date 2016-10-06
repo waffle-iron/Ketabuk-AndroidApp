@@ -1,4 +1,4 @@
-package com.ketabuk.android.activities;
+package com.ketabuk.android.interfaces;
 
 /**
  * Created by Karim Mostafa on 10/5/16.
