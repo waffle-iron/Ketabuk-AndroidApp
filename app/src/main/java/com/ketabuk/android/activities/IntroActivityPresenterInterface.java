@@ -6,4 +6,6 @@ package com.ketabuk.android.activities;
 
 public interface IntroActivityPresenterInterface {
     void goToURL(String url);
+
+    void goToLoginActivity();
 }

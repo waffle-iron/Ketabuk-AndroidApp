@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.ketabuk.android.R;
@@ -20,6 +21,8 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
         ImageButton gitHubStartHere = (ImageButton) findViewById(R.id.github_start_here);
         gitHubStartHere.setOnClickListener(this);
+        Button login = (Button) findViewById(R.id.login_button);
+        login.setOnClickListener(this);
 
         introActivityPresenterInterface = new IntroActivityPresenter(getApplicationContext(), this);
     }
@@ -29,6 +32,10 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.github_start_here:
                 introActivityPresenterInterface.goToURL(getString(R.string.github_start_here));
+                break;
+            case R.id.login_button:
+                introActivityPresenterInterface.goToLoginActivity();
+                break;
         }
     }
 }

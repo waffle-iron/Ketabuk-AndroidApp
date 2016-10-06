@@ -16,6 +16,6 @@ public class LoginActivityPresenter implements LoginActivityPresenterInterface{
 
     @Override
     public void login(String username, String password) {
-        
+
     }
 }
