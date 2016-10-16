@@ -46,10 +46,11 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:2.7'
     compile 'com.google.dagger:dagger:2.7'
     provided 'javax.annotation:jsr250-api:1.0'
+    testApt 'com.google.dagger:dagger-compiler:2.7'
 
     // Mockito
     testCompile "org.mockito:mockito-core:2.0.57-beta"
 
     // Robolectric
-    testCompile "org.mockito:mockito-core:2.0.57-beta"
+    testCompile "org.robolectric:robolectric:3.1.2"
 }
