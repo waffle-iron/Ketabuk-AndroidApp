@@ -2,7 +2,6 @@ package com.ketabuk.android.dagger;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.squareup.picasso.Request;
 
 import javax.inject.Singleton;
 
@@ -16,6 +15,7 @@ import okhttp3.OkHttpClient;
 
 @Module
 public class NetworkModule {
+
     @Provides
     @Singleton
     OkHttpClient provideOkHttpClient(){

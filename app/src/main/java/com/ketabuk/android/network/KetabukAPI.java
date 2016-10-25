@@ -1,22 +1,8 @@
 package com.ketabuk.android.network;
 
-import android.os.Handler;
-import android.os.Looper;
-
 import com.ketabuk.android.interfaces.KetabukAPIInterface;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
+import javax.inject.Inject;
 
 
 /**
@@ -25,9 +11,8 @@ import okhttp3.Response;
 
 public class KetabukAPI implements KetabukAPIInterface {
 
-
+    @Inject
     public KetabukAPI() {
-
     }
 
     @Override

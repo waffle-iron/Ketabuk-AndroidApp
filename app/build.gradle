@@ -36,6 +36,9 @@ dependencies {
     // OkHttp
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
 
+    // MockWebServer
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.4.1'
+
     // Picasso
     compile 'com.squareup.picasso:picasso:2.5.2'
 
