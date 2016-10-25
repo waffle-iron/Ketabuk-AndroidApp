@@ -21,7 +21,7 @@ public class KetabukAPI implements KetabukAPIInterface {
     }
 
     @Override
-    public void Register(String name, String email, String password, String journalName, KetabukAPIResponse ketabukAPIResponse) {
+    public void register(String name, String email, String password, String journalName, KetabukAPIResponse ketabukAPIResponse) {
 
     }
 

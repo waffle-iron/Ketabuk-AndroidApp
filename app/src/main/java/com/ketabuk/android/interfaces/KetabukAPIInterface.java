@@ -7,7 +7,7 @@ package com.ketabuk.android.interfaces;
 public interface KetabukAPIInterface {
     void login(String email, String password, KetabukAPIResponse ketabukAPIResponse);
 
-    void Register(String name, String email, String password, String journalName, KetabukAPIResponse ketabukAPIResponse);
+    void register(String name, String email, String password, String journalName, KetabukAPIResponse ketabukAPIResponse);
 
     void getUserJournal(KetabukAPIResponse ketabukAPIResponse);
 
