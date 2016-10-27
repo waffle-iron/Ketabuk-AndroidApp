@@ -4,12 +4,7 @@ import android.app.Application;
 
 import com.ketabuk.android.R;
 
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
-
-import java.io.IOException;
 
 import javax.inject.Singleton;
 
@@ -40,7 +35,10 @@ public class MockAppModule {
     @Provides
     @Singleton
     Application providesApplication(MockWebServer mockWebServer) {
-        when(application.getString(R.string.url)).thenReturn(mockWebServer.url("/login").toString());
+        when(application.getString(R.string.login)).thenReturn(mockWebServer.url("/login").toString());
+        when(application.getString(R.string.register)).thenReturn(mockWebServer.url("/register").toString());
+        when(application.getString(R.string.journal)).thenReturn(mockWebServer.url("/journal").toString());
+        when(application.getString(R.string.journal_me)).thenReturn(mockWebServer.url("/journal/me").toString());
 
         return application;
     }

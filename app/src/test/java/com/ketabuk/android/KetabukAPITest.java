@@ -85,6 +85,7 @@ public class KetabukAPITest {
             Assert.assertTrue(timeout);
 
             RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/login");
             String request = recordedRequest.getBody().readUtf8();
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
@@ -126,6 +127,7 @@ public class KetabukAPITest {
             Assert.assertTrue(timeout);
 
             RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/login");
             String request = recordedRequest.getBody().readUtf8();
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
@@ -168,6 +170,7 @@ public class KetabukAPITest {
             Assert.assertTrue(timeout);
 
             RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/register");
             String request = recordedRequest.getBody().readUtf8();
 
             Assert.assertTrue(request.contains(name));
@@ -212,6 +215,7 @@ public class KetabukAPITest {
             Assert.assertTrue(timeout);
 
             RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/register");
             String request = recordedRequest.getBody().readUtf8();
 
             Assert.assertTrue(request.contains(name));
@@ -252,6 +256,9 @@ public class KetabukAPITest {
             Boolean timeout = signal.await(responseTimeLimit, TimeUnit.SECONDS); // wait for callback
             Assert.assertTrue(timeout);
 
+            RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/journal/me");
+
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
         }
@@ -284,6 +291,9 @@ public class KetabukAPITest {
         try {
             Boolean timeout = signal.await(responseTimeLimit, TimeUnit.SECONDS); // wait for callback
             Assert.assertTrue(timeout);
+
+            RecordedRequest recordedRequest = server.takeRequest();
+            Assert.assertEquals(recordedRequest.getPath(), "/journal");
 
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
