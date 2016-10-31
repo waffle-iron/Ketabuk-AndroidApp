@@ -1,6 +1,7 @@
 package com.ketabuk.android.dagger;
 
 import com.ketabuk.android.KetabukAPITest;
+import com.ketabuk.android.LoginActivityPresenterTest;
 
 import javax.inject.Singleton;
 
@@ -13,4 +14,5 @@ import dagger.Component;
 @Component(modules={MockAppModule.class, MockNetworkModule.class})
 public interface MockBaseComponent {
     void inject(KetabukAPITest ketabukAPITest);
+    void inject(LoginActivityPresenterTest loginActivityPresenterTest);
 }

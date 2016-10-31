@@ -10,7 +10,7 @@ import com.ketabuk.android.interfaces.LoginActivityPresenterInterface;
 public class LoginActivityPresenter implements LoginActivityPresenterInterface{
     LoginActivityInterface loginActivityInterface;
 
-    LoginActivityPresenter(LoginActivityInterface loginActivityInterface){
+    public LoginActivityPresenter(LoginActivityInterface loginActivityInterface){
         this.loginActivityInterface = loginActivityInterface;
     }
 
