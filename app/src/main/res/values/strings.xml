@@ -44,4 +44,9 @@ Email: lolo@lolo.com\n
 Password: 123456\n
     </string>
 
+    <string name="login">https://api.ketabuk.com/login</string>
+    <string name="register">https://api.ketabuk.com/register</string>
+    <string name="journal">https://api.ketabuk.com/journal</string>
+    <string name="journal_me">https://api.ketabuk.com/journal/me</string>
+
 </resources>
