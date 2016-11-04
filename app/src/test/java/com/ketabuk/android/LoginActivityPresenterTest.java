@@ -4,6 +4,7 @@ import com.ketabuk.android.activities.LoginActivity;
 import com.ketabuk.android.dagger.DaggerMockBaseComponent;
 import com.ketabuk.android.dagger.MockAppModule;
 import com.ketabuk.android.presenters.LoginActivityPresenter;
+import com.ketabuk.android.presenters.PresentersFactory;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -14,6 +15,7 @@ import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowLooper;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -32,13 +34,16 @@ import static org.mockito.Mockito.verify;
  * Created by Karim Mostafa on 10/31/16.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 21)
+@Config(constants = BuildConfig.class, sdk = 23)
 public class LoginActivityPresenterTest {
 
     @Inject
     MockWebServer server;
 
-    Integer responseTimeLimit = 3; // In Seconds
+    @Inject
+    PresentersFactory presentersFactory;
+
+    Integer responseTimeLimit = 5; // In Seconds
 
     @Before
     public void setUp() {
@@ -62,7 +67,7 @@ public class LoginActivityPresenterTest {
 
         LoginActivity loginActivity = Mockito.spy(LoginActivity.class);
 
-        LoginActivityPresenter loginActivityPresenter = new LoginActivityPresenter(loginActivity);
+        LoginActivityPresenter loginActivityPresenter = presentersFactory.providesLoginActivityPresenter(loginActivity);
         loginActivityPresenter.login(email, password);
 
         try {
@@ -91,7 +96,7 @@ public class LoginActivityPresenterTest {
         String password = "wrong password";
 
         LoginActivity loginActivity = Mockito.spy(LoginActivity.class);
-        LoginActivityPresenter loginActivityPresenter = new LoginActivityPresenter(loginActivity);
+        LoginActivityPresenter loginActivityPresenter = presentersFactory.providesLoginActivityPresenter(loginActivity);
         loginActivityPresenter.login(email, password);
 
         try {
