@@ -1,5 +1,9 @@
 package com.ketabuk.android.presenters;
 
+import android.app.Application;
+
+import com.ketabuk.android.network.KetabukAPI;
+
 import javax.inject.Inject;
 
 /**
@@ -7,6 +11,12 @@ import javax.inject.Inject;
  */
 
 public class PresentersFactory {
+
+    @Inject
+    KetabukAPI ketabukAPI;
+
+    @Inject
+    Application application;
 
     @Inject
     PresentersFactory(){
