@@ -1,9 +1,7 @@
 package com.ketabuk.android.activities;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +12,8 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
     private IntroActivityPresenterInterface introActivityPresenterInterface;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,8 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         gitHubStartHere.setOnClickListener(this);
         Button login = (Button) findViewById(R.id.login_button);
         login.setOnClickListener(this);
-
+        Button register = (Button) findViewById(R.id.register_button);
+        register.setOnClickListener(this);
         introActivityPresenterInterface = new IntroActivityPresenter(getApplicationContext(), this);
     }
 
@@ -35,6 +36,9 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.login_button:
                 introActivityPresenterInterface.goToLoginActivity();
+                break;
+            case R.id.register_button:
+                introActivityPresenterInterface.goToRegisterActivity();
                 break;
         }
     }
