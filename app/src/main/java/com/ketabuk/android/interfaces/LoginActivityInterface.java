@@ -7,5 +7,7 @@ package com.ketabuk.android.interfaces;
 public interface LoginActivityInterface {
     void showToast(String message);
 
-    void onLoginSucessListener();
+    void showSnackBar(String text, int duration);
+
+    void onLoginSuccessListener();
 }

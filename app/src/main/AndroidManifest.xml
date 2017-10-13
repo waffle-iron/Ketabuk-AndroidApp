@@ -20,7 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:parentActivityName=".activities.IntroActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.IntroActivity" />
+
+        </activity>
     </application>
 
 </manifest>

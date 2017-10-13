@@ -56,4 +56,9 @@ dependencies {
 
     // Robolectric
     testCompile "org.robolectric:robolectric:3.1.2"
+
+    //Design Support
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+
 }
