@@ -80,7 +80,7 @@ public class RegisterActivityPresenterTest {
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
 
-            verify(registerActivity).onRegisterSucessListener();
+            verify(registerActivity).onRegisterSuccessListener();
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
         }
@@ -112,7 +112,7 @@ public class RegisterActivityPresenterTest {
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
 
-            verify(registerActivity, never()).onRegisterSucessListener();
+            verify(registerActivity, never()).onRegisterSuccessListener();
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
         }

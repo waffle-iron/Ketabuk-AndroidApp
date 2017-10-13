@@ -1,6 +1,7 @@
 package com.ketabuk.android.presenters;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 
 import com.ketabuk.android.R;
 import com.ketabuk.android.interfaces.KetabukAPIInterface;
@@ -13,13 +14,13 @@ import com.ketabuk.android.utilities.PrefUtils;
  * Created by Karim Mostafa on 10/6/16.
  */
 
-public class LoginActivityPresenter implements LoginActivityPresenterInterface{
+public class LoginActivityPresenter implements LoginActivityPresenterInterface {
 
     Context appContext;
     KetabukAPI ketabukAPI;
     LoginActivityInterface loginActivityInterface;
 
-    public LoginActivityPresenter(Context appContext, KetabukAPI ketabukAPI, LoginActivityInterface loginActivityInterface){
+    public LoginActivityPresenter(Context appContext, KetabukAPI ketabukAPI, LoginActivityInterface loginActivityInterface) {
         this.appContext = appContext;
         this.ketabukAPI = ketabukAPI;
         this.loginActivityInterface = loginActivityInterface;
@@ -36,7 +37,7 @@ public class LoginActivityPresenter implements LoginActivityPresenterInterface{
 
             @Override
             public void onError(String error) {
-                loginActivityInterface.showToast(appContext.getString(R.string.login_error));
+                loginActivityInterface.showSnackBar(appContext.getString(R.string.login_error) + " " + error, Snackbar.LENGTH_LONG);
             }
         });
     }
