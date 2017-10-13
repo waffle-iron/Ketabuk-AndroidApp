@@ -48,10 +48,19 @@ Password: 123456\n
     <string name="register">https://api.ketabuk.com/register</string>
     <string name="journal">https://api.ketabuk.com/journal</string>
     <string name="journal_me">https://api.ketabuk.com/journal/me</string>
+    <string name="empty_field_error">This field can\'t be empty!</string>
+    <string name="password_match_error">Password doesn\'t match</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login_str">Login</string>
     <string name="logged_successfully">Logged in successfully, Waiting for the Main Screen feature to be implemented !</string>
+    <string name="registered_successfully">Registered successfully, Waiting for the Main Screen feature to be implemented !</string>
     <string name="login_error">Error while logging in!</string>
+    <string name="registration_error">Error while registration!</string>
+    <string name="loading">Loading .....</string>
+    <string name="no_internet_error">No internet connection</string>
+    <string name="register_str">Register</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="journal_name">Journal Name</string>
 
 </resources>

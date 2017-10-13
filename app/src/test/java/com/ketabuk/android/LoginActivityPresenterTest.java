@@ -15,7 +15,6 @@ import org.mockito.Mockito;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowLooper;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -78,7 +77,7 @@ public class LoginActivityPresenterTest {
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
 
-            verify(loginActivity).onLoginSucessListener();
+            verify(loginActivity).onLoginSuccessListener();
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
         }
@@ -107,7 +106,7 @@ public class LoginActivityPresenterTest {
             Assert.assertTrue(request.contains(email));
             Assert.assertTrue(request.contains(password));
 
-            verify(loginActivity, never()).onLoginSucessListener();
+            verify(loginActivity, never()).onLoginSuccessListener();
         } catch (InterruptedException e) {
             Assert.fail(e.getMessage());
         }
