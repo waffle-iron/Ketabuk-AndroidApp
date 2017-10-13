@@ -8,4 +8,6 @@ public interface IntroActivityPresenterInterface {
     void goToURL(String url);
 
     void goToLoginActivity();
+
+    void goToRegisterActivity();
 }

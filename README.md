@@ -8,4 +8,13 @@ Notes for contributing:
 - If it's not yet created, create a folder for Activities, Fragments, Adapters, Utilities, etc...
 - Have fun.
 
+Libraries used:
+- OkHttp
+- Gson
+- Butter Knife
+- Dagger 2
+- MockWebServer
+- Mockito
+- Robolectric
+
 Website: www.ketabuk.com
