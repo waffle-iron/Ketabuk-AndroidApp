@@ -16,30 +16,32 @@
         android:layout_height="wrap_content"
         android:text="@string/login_messsage" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email" />
-
-    <EditText
-        android:id="@+id/email_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="lolo@lolo.com" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/password" />
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:padding="10dp"
+            android:text="lolo@lolo.com" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/password_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:text="123456" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:text="123456" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/login_button"
