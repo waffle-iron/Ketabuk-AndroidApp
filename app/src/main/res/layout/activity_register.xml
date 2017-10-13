@@ -11,67 +11,81 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ketabuk.android.activities.RegisterActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name" />
 
-    <EditText
-        android:id="@+id/name_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Journal Name" />
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/app_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/journal_name_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email" />
+        <EditText
+            android:id="@+id/journal_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/journal_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/email_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password" />
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/password_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:padding="10dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Repeat Password" />
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="10dp" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/repeat_password_edit_text"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:padding="10dp" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/repeat_password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/repeat_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="10dp" />
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register" />
+        android:text="@string/register_str" />
 
 </LinearLayout>

@@ -44,5 +44,17 @@ Password: 123456\n
     </string>
     <string name="login_error">حدث خطأ أثناء تسجيل الدخول!</string>
 
+    <string name="empty_field_error">هذا الحقل لا يمكن أن يكون فارغا</string>
+    <string name="password_match_error">كلمة المرور غير متطابقة</string>
+    <string name="registered_successfully">Registered successfully, Waiting for the Main Screen feature to be implemented !</string>
+    <string name="registration_error">حدث خطأ أثناء التسجيل </string>
+
+    <string name="hello">أهلا</string>
+    <string name="loading">جاري التحميل .....</string>
+    <string name="no_internet_error">لا يوجد اتصال بالإنترنت</string>
+    <string name="register_str">تسجيل مستخدم جديد</string>
+    <string name="repeat_password">كلمة المرور مرة أخري</string>
+    <string name="journal_name">إسم الكتاب</string>
 
 </resources>
+

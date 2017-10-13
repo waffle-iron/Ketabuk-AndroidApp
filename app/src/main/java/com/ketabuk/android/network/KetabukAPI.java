@@ -6,14 +6,11 @@ import com.ketabuk.android.R;
 import com.ketabuk.android.interfaces.KetabukAPIInterface;
 import com.ketabuk.android.utilities.PrefUtils;
 
-import junit.framework.Assert;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.URL;
 
 import javax.inject.Inject;
 
@@ -96,15 +93,14 @@ public class KetabukAPI implements KetabukAPIInterface {
         try {
 
             journal.put("name", journalName);
-
             user.put("journal", journal);
             user.put("name", name);
-            user.put("email", email);
 
+            registrationForm.put("email", email);
             registrationForm.put("user", user);
             registrationForm.put("password", password);
 
-            parameters.put("credentials", registrationForm);
+            parameters.put("registrationForm", registrationForm);
 
         } catch (JSONException e) {
             ketabukAPIResponse.onError("JSONException: " + e.getMessage());
@@ -140,7 +136,7 @@ public class KetabukAPI implements KetabukAPIInterface {
     public void getUserJournal(final KetabukAPIResponse ketabukAPIResponse) {
         String url = application.getString(R.string.journal_me);
 
-        if(PrefUtils.getToken(application) != null)
+        if (PrefUtils.getToken(application) != null)
             url.concat("?token=" + PrefUtils.getToken(application));
 
         Request request = new Request.Builder()
@@ -173,7 +169,7 @@ public class KetabukAPI implements KetabukAPIInterface {
 
         String url = application.getString(R.string.journal);
 
-        if(PrefUtils.getToken(application) != null)
+        if (PrefUtils.getToken(application) != null)
             url.concat("?token=" + PrefUtils.getToken(application));
 
         Request request = new Request.Builder()

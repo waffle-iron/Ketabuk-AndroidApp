@@ -5,5 +5,5 @@ package com.ketabuk.android.interfaces;
  */
 
 public interface RegisterActivityPresenterInterface {
-    void register(String name, String email, String password, String journalName);
+    void register(String name, String email, String password, String repeatedPassword, String journalName);
 }
