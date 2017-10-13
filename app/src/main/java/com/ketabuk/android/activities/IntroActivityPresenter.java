@@ -34,4 +34,11 @@ public class IntroActivityPresenter implements IntroActivityPresenterInterface {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+
+    @Override
+    public void goToRegisterActivity() {
+        Intent intent = new Intent(context, RegisterActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
 }

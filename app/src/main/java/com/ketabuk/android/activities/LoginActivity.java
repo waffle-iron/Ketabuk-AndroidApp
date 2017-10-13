@@ -1,8 +1,8 @@
 package com.ketabuk.android.activities;
 
-import android.app.Application;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.ketabuk.android.R;
 import com.ketabuk.android.dagger.MyApplication;
 import com.ketabuk.android.interfaces.LoginActivityInterface;
-import com.ketabuk.android.network.KetabukAPI;
 import com.ketabuk.android.presenters.LoginActivityPresenter;
 import com.ketabuk.android.presenters.PresentersFactory;
 import com.ketabuk.android.utilities.PrefUtils;
@@ -45,6 +44,9 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityInt
         setContentView(R.layout.activity_login);
         ((MyApplication) getApplication()).getBaseComponent().inject(this);
         ButterKnife.bind(this);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         loginActivityPresenter = presentersFactory.providesLoginActivityPresenter(this);
     }
@@ -55,10 +57,17 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityInt
     }
 
     @Override
-    public void onLoginSucessListener() {
+    public void showSnackBar(String text, int duration) {
+        Snackbar.make(findViewById(R.id.activity_login), text, duration).show();
+    }
+
+
+    @Override
+    public void onLoginSuccessListener() {
         Log.i(LoginActivity.class.getName(), "Logged in!");
         Log.i(LoginActivity.class.getName(), "Token: " + PrefUtils.getToken(this));
         // Go to Home or Profile
+        showSnackBar(getString(R.string.logged_successfully), Snackbar.LENGTH_INDEFINITE);
     }
 
     @OnClick(R.id.login_button)

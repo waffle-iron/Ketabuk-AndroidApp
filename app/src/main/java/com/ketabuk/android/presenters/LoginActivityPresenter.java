@@ -1,16 +1,13 @@
 package com.ketabuk.android.presenters;
 
-import android.app.Application;
 import android.content.Context;
 
-import com.ketabuk.android.activities.LoginActivity;
+import com.ketabuk.android.R;
 import com.ketabuk.android.interfaces.KetabukAPIInterface;
 import com.ketabuk.android.interfaces.LoginActivityInterface;
 import com.ketabuk.android.interfaces.LoginActivityPresenterInterface;
 import com.ketabuk.android.network.KetabukAPI;
 import com.ketabuk.android.utilities.PrefUtils;
-
-import javax.inject.Inject;
 
 /**
  * Created by Karim Mostafa on 10/6/16.
@@ -33,13 +30,13 @@ public class LoginActivityPresenter implements LoginActivityPresenterInterface{
         ketabukAPI.login(username, password, new KetabukAPIInterface.KetabukAPIResponse() {
             @Override
             public void onSuccess(String result) {
-                loginActivityInterface.onLoginSucessListener();
+                loginActivityInterface.onLoginSuccessListener();
                 PrefUtils.setToken(appContext, result);
             }
 
             @Override
             public void onError(String error) {
-                loginActivityInterface.showToast("Error while logging in!");
+                loginActivityInterface.showToast(appContext.getString(R.string.login_error));
             }
         });
     }
