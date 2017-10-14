@@ -1,3 +1,4 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/Ketabuk/Ketabuk-AndroidApp.png?columns=all)](https://waffle.io/Ketabuk/Ketabuk-AndroidApp?utm_source=badge)
 # Ketabuk-AndroidApp
 This is a part of a greater project. Click [here](https://github.com/Ketabuk/Start-Here) to understand the big picture.
 
